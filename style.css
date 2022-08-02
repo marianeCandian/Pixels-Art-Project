@@ -2,21 +2,24 @@
   text-align: center;
   width: auto;
 }
-#color-palette{
+
+#color-palette {
   display: flex;
   justify-content: center;
   justify-content: space-around;
   width: 30%;
   margin: auto;
 }
-.color{
-  width: 30px;
-  height: 30px;
+
+.color {
+  width: 90px;
+  height: 90px;
   border-color: black;
   border-style: solid;
   border-width: 1px;
-  margin-top: 30px;
+  margin-top: 40px;
 }
+
 #color1 {
   background-color: black;
 }
@@ -31,4 +34,25 @@
 
 #color4 {
   background-color: rgb(12, 241, 12);
+}
+
+#pixel-board {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  display: table;
+  border-spacing: 1px;
+  background-color: black;
+  border: 1px solid black;
+}
+
+.boxe {
+  display: table-row;
+}
+
+.pixel {
+  display: table-cell;
+  background-color: white;
+  width: 40px;
+  height: 40px;
 }
