@@ -22,9 +22,9 @@ const getPixels = document.getElementById('pixel-board');
 getPixels.addEventListener('click', colorPixels);
 
 function creatButton() {
-  let getDiv = document.querySelector('#bnt-content');
-  let newButton = document.createElement('button');
-  let newButtonId = 'clear-board';
+  const getDiv = document.querySelector('#bnt-content');
+  const newButton = document.createElement('button');
+  const newButtonId = 'clear-board';
 
   newButton.innerHTML = 'Limpar';
   newButton.id = newButtonId;
@@ -32,3 +32,11 @@ function creatButton() {
 }
 
 creatButton();
+
+let getButton = document.querySelector('#clear-board');
+getButton.addEventListener('click', () => {
+  const getPixelBoard = document.querySelectorAll('.pixel');
+  for (let e = 0; e < getPixelBoard.length; e += 1) {
+    getPixelBoard[e].style.backgroundColor = 'white';
+  }
+});
