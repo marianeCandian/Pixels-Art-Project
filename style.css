@@ -1,11 +1,16 @@
 * {
   text-align: center;
   width: auto;
+  background-color: rgb(243, 240, 235);
+}
+
+#title {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 60px;
 }
 
 #color-palette {
   display: flex;
-  justify-content: center;
   justify-content: space-around;
   width: 30%;
   margin: auto;
@@ -46,9 +51,9 @@
   border: 2px solid black;
 }
 
-.boxe {
+/* .boxe {
   display: table-row;
-}
+} */
 
 .pixel {
   display: table-cell;
