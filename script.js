@@ -33,10 +33,28 @@ function creatButton() {
 
 creatButton();
 
-let getButton = document.querySelector('#clear-board');
+const getButton = document.querySelector('#clear-board');
 getButton.addEventListener('click', () => {
   const getPixelBoard = document.querySelectorAll('.pixel');
   for (let e = 0; e < getPixelBoard.length; e += 1) {
     getPixelBoard[e].style.backgroundColor = 'white';
   }
 });
+
+function trocandoPixel() {
+  const getBoxe = document.querySelectorAll('.boxe');
+  for (let i = 0; i < getBoxe.length; i += 1) {
+    if (getBoxe[i].parentNode) {
+      getBoxe[i].parentNode.removeChild(getBoxe[i]);
+    }
+  }
+  // const getInput = document.querySelector('#board-size');
+  // for (let i = 0; i < getInput.length; i += 1) {
+  //   let getPixelBoard = document.querySelector('#pixel-board');
+  //   let creatBoxe = document.createElement('div');
+  //   creatBoxe.classList.add('boxe');
+  //   creatBoxe.appendChild(getPixelBoard);
+
+}
+const getButton2 = document.querySelector('#generate-board');
+getButton2.addEventListener('click', trocandoPixel);

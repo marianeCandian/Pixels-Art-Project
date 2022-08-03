@@ -52,14 +52,14 @@
   border: 2px solid black;
 }
 
-/* .boxe {
-  display: table-row;
-} */
-
 .pixel {
   display: table-cell;
   background-color: white;
   width: 40px;
   height: 40px;
   border: 1px solid black;
+}
+
+#bnt-content {
+  margin-bottom: 50px;
 }
