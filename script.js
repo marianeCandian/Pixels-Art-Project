@@ -12,3 +12,11 @@ function modificaCor(event) {
 
 const colorPalette = document.querySelector('#color-palette');
 colorPalette.addEventListener('click', modificaCor);
+
+function colorPixels(event2) {
+  const getSelected = document.querySelector('.selected');
+  const cor = getComputedStyle(getSelected).backgroundColor;
+  event2.target.style.backgroundColor = cor;
+}
+const getPixels = document.getElementById('pixel-board');
+getPixels.addEventListener('click', colorPixels);
