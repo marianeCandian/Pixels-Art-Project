@@ -20,3 +20,15 @@ function colorPixels(event2) {
 }
 const getPixels = document.getElementById('pixel-board');
 getPixels.addEventListener('click', colorPixels);
+
+function creatButton() {
+  let getDiv = document.querySelector('#bnt-content');
+  let newButton = document.createElement('button');
+  let newButtonId = 'clear-board';
+
+  newButton.innerHTML = 'Limpar';
+  newButton.id = newButtonId;
+  getDiv.appendChild(newButton);
+}
+
+creatButton();
