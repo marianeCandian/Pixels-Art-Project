@@ -4,19 +4,11 @@ function selectedClass() {
 }
 selectedClass();
 
-function selecionandoCor() {
-  const getElement = document.querySelectorAll('.color');
-  const getElementeSelected = document.querySelector('.selected');
-  getElementeSelected.classList.remove('selected');
-  for (let index = 0; index < getElement.length; index += 1) {
-    if (getElement[index].classList === 'selected') {
-      getElement[index].classList.remove('selected');
-    } else {
-      getElement[index].addEventListener('click', function (event) {
-        event.target.classList.add('selected');
-      });
-    }
-  }
+function modificaCor(event) {
+  const getElement = document.querySelector('.selected');
+  getElement.classList.remove('selected');
+  event.target.classList.add('selected');
 }
 
-selecionandoCor();
+const colorPalette = document.querySelector('#color-palette');
+colorPalette.addEventListener('click', modificaCor);
