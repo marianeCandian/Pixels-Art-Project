@@ -13,10 +13,10 @@ function modificaCor(event) {
 const colorPalette = document.querySelector('#color-palette');
 colorPalette.addEventListener('click', modificaCor);
 
-function colorPixels(event2) {
+function colorPixels(e) {
   const getSelected = document.querySelector('.selected');
   const cor = getComputedStyle(getSelected).backgroundColor;
-  event2.target.style.backgroundColor = cor;
+  e.target.style.backgroundColor = cor;
 }
 const getPixels = document.getElementById('pixel-board');
 getPixels.addEventListener('click', colorPixels);
@@ -52,8 +52,8 @@ function trocandoPixel() {
   // for (let i = 0; i < getInput.length; i += 1) {
   //   let getPixelBoard = document.querySelector('#pixel-board');
   //   let creatBoxe = document.createElement('div');
-  //   creatBoxe.classList.add('boxe');
-  //   creatBoxe.appendChild(getPixelBoard);
+  //   creatBoxe[i].classList.add('boxe');
+  //   creatBoxe[i].appendChild(getPixelBoard);
 
 }
 const getButton2 = document.querySelector('#generate-board');
