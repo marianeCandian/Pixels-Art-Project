@@ -47,14 +47,24 @@ function trocandoPixel() {
     if (getBoxe[i].parentNode) {
       getBoxe[i].parentNode.removeChild(getBoxe[i]);
     }
-  }
-  // const getInput = document.querySelector('#board-size');
-  // for (let i = 0; i < getInput.length; i += 1) {
-  //   let getPixelBoard = document.querySelector('#pixel-board');
-  //   let creatBoxe = document.createElement('div');
-  //   creatBoxe[i].classList.add('boxe');
-  //   creatBoxe[i].appendChild(getPixelBoard);
-
+  };
 }
+
 const getButton2 = document.querySelector('#generate-board');
 getButton2.addEventListener('click', trocandoPixel);
+
+function criandoNovoBoard() {
+  const getPixelBoard = document.getElementById('pixel-board');
+  const getInput = document.getElementById('board-size');
+  if (getInput.value.length === 0) {
+    return alert('Board Inválido');
+  } if (getInput.value < 5) {
+    creandoPixels(5);
+  } else if (getInput.value > 50) {
+    creandoPixels(50);
+  } else {
+    creandoPixels(getInput.value);
+    getPixelBoard.style.gridTemplateColumns = 'repeat(${getInput.value}, 40px)';
+  }
+}
+criandoNovoBoard();
